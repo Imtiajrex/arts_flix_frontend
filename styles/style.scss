@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$default-color: #dddddd;
+$icon-active-color: #f09eae;
+$secondary-color: #141518;
+$tertiary-color: #30475e;
+$light-color: #eeeeee;
+$danger-color: #ff4c37;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body {
+  background-color: $default-color;
+  font-family: "Roboto", sans-serif;
+}
+.nav-bar {
+  width: 100%;
+  background-color: $secondary-color;
+  // box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    max-width: 1100px;
+    display: flex;
+    padding: 0rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .brand {
+      display: flex;
+      font-size: 35px;
+      color: $danger-color;
+    }
+    .menu {
+      display: flex;
+      .item {
+        cursor: pointer;
+        padding: 10px 35px;
+        font-size: 27px;
+        color: rgba($color: $default-color, $alpha: 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.2s ease-in-out;
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+        small {
+          color: $default-color;
+          font-size: 10px;
+          padding: 0.5rem 0 0 0;
+          font-weight: bold;
+          transition: 0.2s ease-in-out;
+        }
+
+        // &:hover {
+        //   border-bottom: 3px solid $danger-color;
+        //   color: $danger-color;
+        //   filter: brightness(0.8);
+        //   small {
+        //     color: $danger-color;
+        //     filter: brightness(0.8);
+        //   }
+        // }
+      }
+      .active {
+        color: rgba($color: $danger-color, $alpha: 1);
+        border-bottom: 3px solid $danger-color;
+
+        small {
+          color: $danger-color;
+        }
+      }
+    }
+  }
+}

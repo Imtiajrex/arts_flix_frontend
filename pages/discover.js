@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
-export default function Home() {
+export default function Discover() {
   return (
     <div>
-      <Navbar id={1} />
+      <Navbar id={2} />
     </div>
   );
 }
